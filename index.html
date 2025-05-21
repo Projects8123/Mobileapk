@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VitalFlow: AI Habit Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              themePrimary: 'var(--color-primary)',
+              themeSecondary: 'var(--color-secondary)',
+              themeAccent: 'var(--color-accent)',
+              themeBackground: 'var(--color-background)',
+              themeText: 'var(--color-text)',
+              themeCard: 'var(--color-card)',
+            },
+            spacing: {
+              '16': '4rem', // Ensure nav height is explicitly available if needed elsewhere
+            }
+          },
+        },
+      };
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.511.0",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.0",
+    "react/jsx-runtime": "https://esm.sh/react@^19.1.0/jsx-runtime",
+    "react-router-dom": "https://esm.sh/react-router-dom@^6.25.1",
+    "recharts": "https://esm.sh/recharts@^2.15.3",
+    "react-calendar/": "https://esm.sh/react-calendar@^5.1.0/",
+    "react-calendar": "https://esm.sh/react-calendar@^5.1.0",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.0/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "i18next": "https://esm.sh/i18next@^23.13.2",
+    "react-i18next": "https://esm.sh/react-i18next@^15.0.0",
+    "i18next-browser-languagedetector": "https://esm.sh/i18next-browser-languagedetector@^8.0.0"
+  }
+}
+</script>
+<style>
+  /* Custom scrollbar for a cleaner look */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-accent);
+    border-radius: 10px;
+    border: 2px solid var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-primary);
+  }
+
+  html, body, #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #root {
+    flex-grow: 1;
+  }
+
+</style>
+</head>
+  <body class="bg-themeBackground text-themeText font-sans">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
